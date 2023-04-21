@@ -1,0 +1,2 @@
+dotnet publish Flow.Launcher.Plugin.OpenAI -c Release -r win-x64 --no-self-contained
+Compress-Archive -LiteralPath Flow.Launcher.Plugin.OpenAI/bin/Release/win-x64/publish -DestinationPath Flow.Launcher.Plugin.OpenAI/bin/OpenAI.zip -Force
