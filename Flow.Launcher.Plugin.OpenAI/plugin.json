@@ -2,11 +2,11 @@
     "ID": "92CE6C3E-CF1A-452B-9943-7433426F83DA",
     "ActionKeyword": "gpt",
     "Name": "OpenAI",
-    "Description": "a OpenAI plugin for Flow-Launcher",
+    "Description": "OpenAI plugin for Flow-Launcher",
     "Author": "changeforan",
     "Version": "1.0.0",
     "Language": "csharp",
     "Website": "https://github.com/changeforan/Flow.Launcher.Plugin.OpenAI",
-    "IcoPath": "icon.png",
+    "IcoPath": "Images\\app.png",
     "ExecuteFileName": "Flow.Launcher.Plugin.OpenAI.dll"
 }
