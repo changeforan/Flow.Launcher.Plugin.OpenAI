@@ -37,7 +37,7 @@ namespace Flow.Launcher.Plugin.OpenAI
 
         public List<Result> Query(Query query)
         {
-            var search = query.Search;
+            var search = query.Search.Trim();
             var assistant = GetActiveAssistant(search);
             if (!CanGenerateResponse(query))
             {
@@ -54,7 +54,12 @@ namespace Flow.Launcher.Plugin.OpenAI
                 return results;
             }
 
-            var response = GenerateResponse(_settings.SystemPrompts[assistant], query.Search);
+            if (query.Search.StartsWith(assistant, StringComparison.OrdinalIgnoreCase))
+            {
+                search = search.Substring(assistant.Length).Trim();
+            }
+
+            var response = GenerateResponse(_settings.SystemPrompts[assistant], search);
 
             var result = new Result
             {
